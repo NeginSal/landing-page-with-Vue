@@ -1,65 +1,94 @@
 <template>
-    <section id="section2">
-        <div class="content">
-            <h2 class="m-heading m-2">لورم ایپسوم متن ساختگی</h2>
-            <p class="my-1">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-            </p>
-            <h3>لورم ایپسوم</h3>
-            <ul class="list">
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-            </ul>
-        </div>
-        <div class="content bg-dark p-2">
-            <h2 class="m-heading m-2">لورم ایپسوم متن ساختگی</h2>
-            <p class="my-1">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-            </p>
-            <h3>لورم ایپسوم</h3>
-            <ul class="list">
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-                <li>لورم ایپسوم</li>
-            </ul>
-        </div>
-    </section>
-  
+  <div class="section">
+    <div>
+      <p class="title">کیمیاگر تراز ۱</p>
+      <p class="text">
+        کاربر سطح یک کاربری است که اطلاعات اولیه ای همچون اسم ,فامیل, تاریخ تولد
+        ,کد ملی , ایمیل ,موبایل و شماره کارت بانکی در سایت وارد کرده است و
+        قابلیت هایی همچون واریز و برداشت رمز ارز واریز و برداشت ارز های
+        الکترونیک و برداشت ریالی و معرفی کاربران و شرکت در کسب درآمد مجموعه را
+        دارا میباشد
+      </p>
+    </div>
+    <div class="flex-container">
+      <div class="flex-child magenta">
+        <p class="title-2">مدارک مورد نیاز</p>
+        <ul class="list">
+          <li>ایمیل معتبر</li>
+          <li>ایمیل معتبر</li>
+          <li>شماره موبایل به نام کاربر</li>
+          <li>اطلاعات فردی معتبر ( اسم فامیل تاریخ تولد کد ملی)</li>
+          <li>شماره کارت بانکی معتبر همراه با شماره شبای بانکی</li>
+        </ul>
+      </div>
+
+      <div class="flex-child green">
+        <p class="title-2">مدارک مورد نیاز</p>
+        <ul class="list">
+          <li>ایمیل معتبر</li>
+          <li>ایمیل معتبر</li>
+          <li>شماره موبایل به نام کاربر</li>
+          <li>اطلاعات فردی معتبر ( اسم فامیل تاریخ تولد کد ملی)</li>
+          <li>شماره کارت بانکی معتبر همراه با شماره شبای بانکی</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
-#section2{
-    display: flex;
+.section {
+  background-color: #f2f7ff;
+  padding: 24px;
+  border-radius: 20px;
+  margin: 20px;
 }
-#section2 div{
-    flex: 1;
+.title {
+  text-align: right;
+  font-size: 24px;
+  font-weight: 900;
+  color: #12377b;
+}
+.text {
+  text-align: right;
+  color: #666464;
+  font-size: 16px;
+  font-weight: 500;
+}
+.title-2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #12377b;
+  text-align: right;
+}
+.list {
+  margin: 0.5rem;
+  list-style: none;
+}
+.list li {
+  background-color: #ffffff;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: right;
+  padding: 20px;
+  margin: 10px;
+}
+.flex-container {
+  display: flex;
 }
 
-#section2 .content{
-    text-align: right;
+.flex-child {
+  flex: 1;
 }
-.list{
-    margin: 0.50rem;
-    list-style: none;
-}
-.list li{
-    border-bottom: #444 dotted 1px;
-    padding: 0.5rem 0;
+
+.flex-child:first-child {
+  margin-right: 20px;
 }
 </style>>
 

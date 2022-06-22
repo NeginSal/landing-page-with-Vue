@@ -2,12 +2,13 @@
    <footer id="main-footer" class="py-2">
       <div class="container footer-container">
         <div>
-          <h3>اشتراک</h3>
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ .</p>
-          <form>
-            <input type="email" placeholder="ایمیل شما ..." />
-            <input type="submit" value="اشتراک" class="btn btn-primary" />
-          </form>
+          <h3>راهنمای خرید</h3>
+          <ul class="list">
+            <li><a href="#"> مقالات </a></li>
+            <li><a href="#"> برترین های </a></li>
+            <li><a href="#"> درباره ما </a></li>
+            <li><a href="#"> تماس با ما</a></li>
+          </ul>
         </div>
 
         <div>
@@ -39,7 +40,7 @@
         
         <div>
           <p>
-            کپی رایت  &copy; 2019, لورم ایپسوم متن ساختگی
+            تمامی حقوق این سایت محفوظ و متعلق به اِتِرِکس می باشد 
           </p>
         </div>
       </div>
@@ -54,13 +55,19 @@ export default {
 </script>
 
 <style scoped>
+h3{
+  color: #2A6AE3;
+  font-weight:700 ;
+  font-size: 18px;
+
+}
 #main-footer {
   background: var(--dark-color);
-  color: #fff;
+  color: black;
 }
 
 #main-footer a {
-  color: #fff;
+  color: black;
 }
 
 #main-footer .footer-container {
@@ -70,7 +77,12 @@ export default {
 }
 
 #main-footer .footer-container div:last-child {
-  background: #444;
+  background: #2A6AE3;
+  border-radius: 32px 32px 0px 0px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
   grid-column: 1 / span 4;
   padding: .5rem;
   font-size: 0.75rem;
