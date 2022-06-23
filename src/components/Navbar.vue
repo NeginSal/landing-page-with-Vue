@@ -1,28 +1,16 @@
 <template>
-  <!-- <nav class="nav">
-    <ul>
-      <li>اتراکس</li>
-      <li>خانه</li>
-      <li>خرید رمز ارز</li>
-      <li>بازارها</li>
-      <li>تیدیل رمز ازز</li>
-      <li>بلاگ</li>
-      <li>ثبت نام</li>
-      <li>ورود</li>
-    </ul>
-  </nav> -->
   <nav id="navbar">
-    <ul class="one">
-      <li><a href="#">درباره ما</a></li>
-      <li><a href="#">تماس با ما</a></li>
+    <ul>
+      <li><a class="three" href="#">ثبت نام</a></li>
+      <li><a href="#">ورود</a></li>
     </ul>
-    <ul class="two">
-      <li><a href="#">خانه</a></li>
-      <li><a href="#">درباره ما</a></li>
-      <li><a href="#">تماس با ما</a></li>
-      <li><a href="#">تماس با ما</a></li>
-      <li><a href="#">تماس با ما</a></li>
-      <li><a href="#">تماس با ما</a></li>
+    <ul>
+      <li><a class="one" href="#">اتراکس</a></li>
+      <li class="two"><a href="#">خانه</a></li>
+      <li><a href="#">خرید رمزارز</a></li>
+      <li><a href="#">بازارها</a></li>
+      <li><a href="#"> تبدیل رمزارز</a></li>
+      <li><a href="#"> بلاگ</a></li>
     </ul>
   </nav>
 </template>
@@ -36,12 +24,8 @@ export default {};
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  position: sticky;
   top: 0%;
   background-color: white;
-}
-#navbar a {
-  color: black;
 }
 #navbar ul {
   display: flex;
@@ -50,12 +34,33 @@ export default {};
   list-style: none;
 }
 #navbar ul li a {
-  padding: 0.75rem;
+  padding: 7px;
   margin: 0 0.25rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
 }
-#navbar ul li a:hover {
-  background: orange;
-  color: white;
-  border-radius: 5px;
+.one{
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+.two {
+  background: rgba(42, 106, 227, 0.1);
+  border-radius: 18px;
+}
+.three {
+  color: white !important;
+  background: #2a6ae3;
+  border-radius: 14px;
+}
+@media (max-width: 500px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  #navbar ul {
+    padding: 5px;
+  }
 }
 </style>

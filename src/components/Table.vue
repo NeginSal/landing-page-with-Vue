@@ -147,4 +147,9 @@ export default {};
   background: #e9f1ff;
   border-radius: 50px;
 }
+@media (max-width: 500px) {
+  .table {
+    padding: 10px;
+  }
+}
 </style>

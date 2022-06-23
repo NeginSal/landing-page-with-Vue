@@ -133,4 +133,13 @@ export default {};
   font-size: 24px;
   cursor: pointer;
 }
+@media (max-width: 500px) {
+  #footer1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer1 ul {
+    padding: 5px;
+  }
+}
 </style>
