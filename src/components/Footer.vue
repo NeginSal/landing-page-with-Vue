@@ -12,41 +12,44 @@
       </p>
     </div>
     <section id="section1">
-        <div class="items">
-          <div class="item">
-            <div>
-              <p class="title">راهنماو پشتیبانی</p>
-              <ul>
-                <li>سوالات متداول</li>
-                <li>کارمزدها</li>
-                <li>احراز هویت و سطح کاربری</li>
-                <li>راهنمای امنیت حساب</li>
-              </ul>
-            </div>
-          </div>
-          <div class="item">
-            <div>
-              <p class="title">درباره صرافی اتراکس</p>
-              <ul>
-                <li>درباره ما</li>
-                <li>تماس با ما</li>
-                <li>امنیت مجموعه</li>
-                <li>قوانین و مقررات</li>
-              </ul>
-            </div>
-          </div>
-          <div class="item">
-            <div>
-              <p>اتراکس</p>
-              <p>
-                برای حرکت به سوی اهداف و ماموریتمان، ما سه ارزش ساده را دنبال می
-                کنیم: برای جامعه مفید باشیم، مشتری مدار باشیم، قهرمان باشیم.
-              </p>
-              <p>icona</p>
-            </div>
+      <div class="items">
+        <div class="item">
+          <div>
+            <p class="title">راهنماو پشتیبانی</p>
+            <ul>
+              <li>سوالات متداول</li>
+              <li>کارمزدها</li>
+              <li>احراز هویت و سطح کاربری</li>
+              <li>راهنمای امنیت حساب</li>
+            </ul>
           </div>
         </div>
-
+        <div class="item">
+          <div>
+            <p class="title">درباره صرافی اتراکس</p>
+            <ul>
+              <li>درباره ما</li>
+              <li>تماس با ما</li>
+              <li>امنیت مجموعه</li>
+              <li>قوانین و مقررات</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <h3>اتراکس</h3>
+            <p>
+              برای حرکت به سوی اهداف و ماموریتمان، ما سه ارزش ساده را دنبال می
+              کنیم: برای جامعه مفید باشیم، مشتری مدار باشیم، قهرمان باشیم.
+            </p>
+            <p class="icons">
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-telegram"></i>
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <div id="main-footer">
       <p>تمامی حقوق این سایت محفوظ و متعلق به اِتِرِکس می باشد</p>
@@ -123,5 +126,11 @@ export default {};
   font-size: 18px;
   color: #2a6ae3;
   text-align: right;
+}
+.icons i {
+  margin-left: 15px;
+  color: #2a6ae3;
+  font-size: 24px;
+  cursor: pointer;
 }
 </style>
