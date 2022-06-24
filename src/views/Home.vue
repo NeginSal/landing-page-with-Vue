@@ -1,28 +1,15 @@
 <template>
-  <div>
-    <Header/>
-    <Table/>
-    <Section/>
-    <Section/>
-    <Section/>
-    <Section/>
-  </div>
+  <Login />
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import Table from '../components/Table.vue'
-import Section from '../components/Section.vue'
-
+import Login from "./Login.vue";
 export default {
-  name: "Home",
   components: {
-    Header,
-    Table,
-    Section
-  },
-  data() {
-    return {};
+    Login,
   },
 };
 </script>
+
+<style>
+</style>
