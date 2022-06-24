@@ -1,30 +1,41 @@
 <template>
-  <form>
+  <form @submit.prevent="handleSubmit">
     <label>Email:</label>
     <input required v-model="email" />
-    <div v-if="EmailError" class="error">{{ EmailError }}</div>
     <label>Password:</label>
     <input type="password" required v-model="password" />
-    <div v-if="PasswordError" class="error">{{ PasswordError }}</div>
-    <button @click="login">LOGIN</button>
+    <button>LOGIN</button>
   </form>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
-      password: "",
       email: "",
-      EmailError: "",
-      PasswordError: "",
+      password: "",
     };
   },
   methods: {
-    login() {
-        this.$router.push("/");
-      
+    async handleSubmit() {
+      let result = await axios.get(
+        `https://reqres.in/api/users?email=${this.email}&password=${this.password}`
+      );
+      if (result.status == 200 && result.data.length > 0) {
+        localStorage.setItem("userInfo", JSON.stringify(result.data[0]));
+        this.$router.push({ path: "/firstPage" });
+      }
+      console.log(result.data);
+      console.log(this.email, this.password);
+      console.log(result);
     },
+  },
+  mounted() {
+    let user = localStorage.getItem("userInfo");
+    if (user) {
+      this.$router.push({ name: "FirstPage" });
+    }
   },
 };
 </script>
@@ -34,6 +45,9 @@ form {
   background: white;
   padding: 20px;
   border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #bbb;
 }
 label {
   display: block;
@@ -60,6 +74,7 @@ form button {
   border: 0;
   border-radius: 6px;
   font-size: 16px;
+  cursor: pointer;
 }
 .error {
   color: red;
