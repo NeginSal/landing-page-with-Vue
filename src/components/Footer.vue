@@ -133,7 +133,7 @@ export default {};
   font-size: 24px;
   cursor: pointer;
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   #footer1 {
     flex-direction: column;
     align-items: center;

@@ -2,8 +2,10 @@
   <form @submit.prevent="handleSubmit">
     <label>Email:</label>
     <input required v-model="email" />
+    <div v-if="EmailError" class="error">{{ EmailError }}</div>
     <label>Password:</label>
     <input type="password" required v-model="password" />
+    <div v-if="PasswordError" class="error">{{ PasswordError }}</div>
     <button>LOGIN</button>
   </form>
 </template>
@@ -15,24 +17,37 @@ export default {
     return {
       email: "",
       password: "",
+      EmailError: "",
+      PasswordError: "",
     };
   },
   methods: {
     async handleSubmit() {
-      let result = await axios.get(
-        `https://reqres.in/api/users?email=${this.email}&password=${this.password}`
-      );
-      if (result.status == 200 && result.data.length > 0) {
-        localStorage.setItem("userInfo", JSON.stringify(result.data[0]));
-        this.$router.push({ path: "/firstPage" });
+      this.EmailError =
+        this.email.length > 5
+          ? ""
+          : "The entered email must be at least 5 characters.";
+      this.PasswordError =
+        this.password.length > 8
+          ? ""
+          : "The password entered must have at least 8 digits.";
+      let flag = this.NameError || this.EmailError || this.PasswordError;
+      if (!flag) {
+        let result = await axios.get(
+          `https://reqres.in/api/users?email=${this.email}&password=${this.password}`
+        );
+        if (result.status == 200) {
+          localStorage.setItem("user-info", JSON.stringify(result.data));
+          this.$router.push({ name: "FirstPage" });
+        }
+        console.log(result.data);
+        console.log(this.email, this.password);
+        console.log(result);
       }
-      console.log(result.data);
-      console.log(this.email, this.password);
-      console.log(result);
     },
   },
   mounted() {
-    let user = localStorage.getItem("userInfo");
+    let user = localStorage.getItem("user-info");
     if (user) {
       this.$router.push({ name: "FirstPage" });
     }
